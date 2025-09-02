@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Website — Bootstrap + Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 70px; }
+    .resume { max-width: 900px; margin: 0 auto; }
+    pre.code-block { background: #f8f9fa; padding: 1rem; border-radius: .5rem; overflow:auto; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MySite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#profile">Profile</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item me-3">
+          <a class="nav-link position-relative" href="#cart" id="cartLink">
+            <!-- simple cart icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 6A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L1.01 1.607 0 1.5zM4.415 6L5.2 10h7.6l1.1-4.4H4.415z"/>
+            </svg>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="#profile">View Profile</a></li>
+            <li><a class="dropdown-item" href="#profile #resume-html">View Resume HTML</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main -->
+<main class="container">
+  <section id="home" class="mb-5">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Welcome to the sample site</h1>
+        <p class="col-md-8 fs-5">This single-file example uses Bootstrap for styling. The navbar includes a Cart option and a Profile section which contains a sample resume rendered as HTML plus the raw HTML code.</p>
+        <button class="btn btn-primary btn-lg" id="addItemBtn">Add sample item to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="mb-5">
+    <h2>About</h2>
+    <p>This is a small demo site showing how to structure a Bootstrap-based page with a navbar, cart indicator, and a profile/resume area. You can edit this file and deploy it as <code>index.html</code> on GitHub Pages to make it live.</p>
+  </section>
+
+  <section id="profile" class="mb-5 resume">
+    <h2 class="mb-3">Profile</h2>
+
+    <!-- Rendered Resume -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h3 class="card-title">GPT-5 Thinking mini <small class="text-muted">(sample — fictional)</small></h3>
+        <p class="mb-1"><strong>Role:</strong> AI Assistant (sample resume shown for demonstration)</p>
+        <p class="text-muted">Below is a professional-style resume rendered in HTML. This is a fictional/sample resume intended for demonstration only.</p>
+
+        <hr>
+
+        <section id="resume-rendered">
+          <h4>Professional Summary</h4>
+          <p>Resourceful AI assistant with broad capabilities in natural language understanding, code assistance, and content generation. Demonstrated experience helping users learn, build websites, debug code, and prepare documentation.</p>
+
+          <h4>Skills</h4>
+          <ul>
+            <li>Natural language understanding & generation</li>
+            <li>Frontend development: HTML, CSS, JavaScript, Bootstrap</li>
+            <li>Version control with Git & GitHub</li>
+            <li>Technical writing, tutoring, and documentation</li>
+          </ul>
+
+          <h4>Selected (Fictional) Experience</h4>
+          <div>
+            <strong>AI Assistant — OpenAI (virtual)</strong>
+            <p class="mb-1"><em>2023 — Present (fictional)</em></p>
+            <ul>
+              <li>Provided code examples, debugging help, and full-stack guidance to millions of users.</li>
+              <li>Authored tutorials and sample projects demonstrating deployment workflows (e.g., GitHub Pages).</li>
+            </ul>
+          </div>
+
+          <h4>Education</h4>
+          <p><strong>Large-scale Transformer Training — Machine Learning Foundation</strong> (Fictional)</p>
+
+          <h4>Projects</h4>
+          <ul>
+            <li>Website generator templates, code snippets, and interactive learning modules.</li>
+            <li>Sample resume generator and export to HTML/PDF.</li>
+          </ul>
+
+          <h4>Contact</h4>
+          <p>This is a sample resume for demonstration; no real contact details are provided.</p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Raw resume HTML (escaped) -->
+    <details>
+      <summary class="mb-2">Show resume as raw HTML code (click to expand)</summary>
+      <pre class="code-block"><code id="resume-html">&lt;!-- Sample resume HTML (fictional) --&gt;
+&lt;div class="resume"&gt;
+  &lt;h1&gt;GPT-5 Thinking mini &lt;small&gt;(sample - fictional)&lt;/small&gt;&lt;/h1&gt;
+  &lt;h2&gt;Professional Summary&lt;/h2&gt;
+  &lt;p&gt;Resourceful AI assistant with broad capabilities in natural language understanding, code assistance, and content generation.&lt;/p&gt;
+  &lt;h2&gt;Skills&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Natural language understanding &amp; generation&lt;/li&gt;
+    &lt;li&gt;Frontend development: HTML, CSS, JavaScript, Bootstrap&lt;/li&gt;
+    &lt;li&gt;Version control with Git &amp; GitHub&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2&gt;Experience&lt;/h2&gt;
+  &lt;h3&gt;AI Assistant — OpenAI (virtual)&lt;/h3&gt;
+  &lt;p&gt;2023 — Present (fictional)&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Provided code examples, debugging help, and full-stack guidance to users.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+    </details>
+
+  </section>
+
+  <section id="cart" class="mb-5">
+    <h2>Cart</h2>
+    <p>Your cart items will appear here. This sample updates the cart count when you click the button on the home jumbotron.</p>
+    <ul class="list-group" id="cartItems"></ul>
+  </section>
+
+  <section id="contact" class="mb-5">
+    <h2>Contact</h2>
+    <p>Want changes? Edit this HTML file. To publish: save it as <code>index.html</code> and upload to a GitHub repository, then enable GitHub Pages in the repo settings.</p>
+  </section>
+
+</main>
+
+<!-- Bootstrap JS bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Simple cart demo behavior
+  const cartCount = document.getElementById('cartCount');
+  const cartItems = document.getElementById('cartItems');
+  let count = 0;
+
+  document.getElementById('addItemBtn').addEventListener('click', () => {
+    count++;
+    cartCount.textContent = count;
+    const li = document.createElement('li');
+    li.className = 'list-group-item';
+    li.textContent = 'Sample item ' + count;
+    cartItems.appendChild(li);
+  });
+</script>
+</body>
+</html>
