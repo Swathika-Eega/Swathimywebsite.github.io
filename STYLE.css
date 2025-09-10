@@ -1,0 +1,72 @@
+/* General page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f6f2;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Navigation links */
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ffd700;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Main section */
+  main {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  main h2 {
+    font-size: 1.8rem;
+    color: #4a2c2a;
+    margin-bottom: 15px;
+  }
+  
+  main p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+  
+    nav a {
+      display: block;
+      margin: 8px 0;
+    }
+  }
+  
